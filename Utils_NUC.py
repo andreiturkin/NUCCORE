@@ -15,7 +15,7 @@ from interval import interval
 # Plotting
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-from ElConRus2018Utils_Plotting import PlottingTree
+from Utils_Plotting import PlottingTree
 
 class Box(object):
     def __init__(self, cpoint, sides):
@@ -113,8 +113,8 @@ class CoveringTree(object):
             # Get all the rectangles that are on some level of the tree
             curLevelNodes = self.__sTree.get_leaves_by_name(name='{}'.format(curLevel))
             # Uncomment if you would like to see the progress of calculation for every level
-            # print 'The {}th layer of boxes with the diameter equals {} is precessed'.format(curLevel, \
-            #         curLevelNodes[0].Box.getDiam())
+            print 'The {}th layer of boxes with the diameter equals {} is precessed'.format(curLevel, \
+                    curLevelNodes[0].Box.getDiam())
             # Loop over the rectangles
             for curLevelNode in curLevelNodes:
                 nIter = nIter + 1
@@ -145,8 +145,8 @@ class CoveringTree(object):
             if bExit:
                 # Uncomment if you would like to get information on the processed levels
                 # and iterations
-                # print 'Number of levels were processed: {}'.format(curLevel)
-                # print 'Number of iterations: {}'.format(nIter)
+                print 'Number of levels were processed: {}'.format(curLevel)
+                print 'Number of iterations: {}'.format(nIter)
                 self.__nLevelsProcessed = curLevel
                 self.__nIterations = nIter
                 if self.__bShow:

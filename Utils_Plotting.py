@@ -14,7 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from ete3 import Tree
 from interval import interval
 # Saving as a json file
-from ElConRus2018Utils_jsonSaving import saveDataToFile
+from Utils_jsonSaving import saveDataToFile
 
 # Refinement
 from scipy import optimize
